@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 
-// like problem solved--- 
+// like problem solved--- --
 
 const addToLiked = (id) => {
   likedPostsId.push(id);
@@ -30,7 +30,7 @@ const reportPost = (id) => {
 };
 
 
-// ------comment solved----- 
+// ------comment solved--------
 
 const displayContent = (text) => {
   if (text.length > 30) {
@@ -132,12 +132,17 @@ const createPost = (post) => {
                   <hr/>
 
                   <div class="post__description">
-                    <small>
+
+
+                    <small>                  
                       <a class="post__name--underline" href="#">
                           ${post.comments[0]?.user}
                       </a>
                       ${post.comments[0]?.text}
                     </small>
+
+
+
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
                 </div>
@@ -157,7 +162,8 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  // clear div is here --- 
+
+  // clear div is here ----- ----
   document.getElementById("liked").innerText = '';
 
   const likedPosts = getLikedPosts();
@@ -168,8 +174,11 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
-  // clear the is here--- 
+
+
+  // clear the is here--- ----
   document.getElementById("reported").innerText = '';
+
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
